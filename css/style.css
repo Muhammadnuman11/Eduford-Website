@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ----- Header Section ------ */
+
+.header {
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+        url(../asset/img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+nav img {
+    width: 130px;
+}
+
+/* Manu Button */
+
+.manu {
+    position: absolute;
+    cursor: pointer;
+    margin: 10px;
+    display: none;
+    top: 5px;
+    right: 5px;
+}
+
+.line {
+    width: 28px;
+    height: 5px;
+    background-color: #dddddd;
+    margin: 3px;
+    border-radius: 10px;
+    transition: all 0.7s ease;
+}
+
+.cross {
+    cursor: pointer;
+    margin: 10px;
+    display: none;
+    padding: 4px;
+}
+
+.line1 {
+    width: 25px;
+    height: 6px;
+    background-color: #dddddd;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.7s ease;
+    transform: rotate(45deg) translate(2px, 15px);
+}
+
+.line2 {
+    width: 25px;
+    height: 6px;
+    background-color: #dddddd;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.7s ease;
+    transform: rotate(-45deg) translate(-7px, -6px);
+}
+
+
+/* ----- Nav List ------ */
+
+.navList ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navList ul li {
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navList ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navList ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navList ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px 0;
+    font-size: 16px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hero-btn:hover {
+    border: 2px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+@media(max-width: 710px) {
+
+    nav{
+        padding: 15px 20px;
+    }
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .navList ul {
+        display: block;
+        padding: 20px;
+    }
+
+    .navList {
+        position: absolute;
+        background-color: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        z-index: 100;
+        text-align: left;
+        transition: 1s;
+    }
+
+    .cross {
+        display: block;
+    }
+
+    .manu {
+        display: block;
+    }
+
+}
+
+/* ----- Course Section ------ */
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.courseCol {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.courseCol:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+@media(max-width: 710px) {
+    .row {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* ----- Campus Section ------ */
+
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campusCol {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campusCol img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(255, 1, 1, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* ----- Facilities Section ------ */
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilitiesCol {
+    flex-basis: 31%;
+    border-radius: 10px;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.facilitiesCol img {
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+}
+
+.facilitiesCol p {
+    padding: 0;
+}
+
+.facilitiesCol h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* ----- Testimonials Section ------ */
+
+.testimonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.testimonialsCol {
+    flex-basis: 40%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #ffefef;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonialsCol img {
+    height: 40px;
+    width: 180px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonialsCol p {
+    padding: 0;
+}
+
+.testimonialsCol h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonialsCol .fa {
+    color: #f44336;
+}
+
+@media(max-width: 710px) {
+
+    .testimonialsCol {
+        flex-basis: 38%;
+    }
+
+    .testimonialsCol img {
+        margin-left: 0px;
+        width: 280px;
+        margin-right: 15px;
+    }
+}
+
+/* ----- Call to Action Section ------ */
+
+.call {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../asset/img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.call h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 710px) {
+
+    .call h1 {
+        font-size: 24px;
+    }
+}
+
+/* ----- Footer Section ------ */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #efefefea;
+    margin-top: 100px;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+.fa-heart-o {
+    color: #f44336;
+}

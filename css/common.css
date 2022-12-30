@@ -1,0 +1,294 @@
+/* ----- Common Header ------ */
+.headerAll {
+    min-height: 65vh;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+        url(../asset/img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.headerAll .text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    text-align: center;
+}
+
+.headerAll .text-box h1 {
+    font-size: 38px;
+}
+
+@media(max-width: 710px) {
+
+    .headerAll .text-box h1 {
+        font-size: 23px;
+    }
+}
+
+/* ----- About Page ------ */
+.about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.aboutCol {
+    flex-basis: 48%;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: left;
+}
+
+.aboutCol h1 {
+    font-size: 36px;
+}
+
+.aboutCol p {
+    padding: 0;
+    margin: 25px 0;
+}
+
+.aboutCol img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.aboutCol .hero-btn {
+    border: 2px solid #f44336;
+    color: #f44336;
+}
+
+.aboutCol .hero-btn:hover {
+    color: white;
+}
+
+@media(max-width: 710px) {
+
+    .aboutCol h1 {
+        font-size: 22px;
+    }
+}
+
+/* ----- Blog Page ------ */
+.blog {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.blogCol1 {
+    width: 70%;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+}
+
+.blogCol1 h1 {
+    font-size: 28px;
+    margin: 35px 0;
+}
+
+.blogCol1 p {
+    padding: 0;
+    margin: 25px 0;
+}
+
+.blogCol1 img {
+    width: 100%;
+    display: block;
+}
+
+
+.blogCol2 {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 40px;
+}
+
+.blogCol2 .catHead {
+    background: red;
+    font-size: 21px;
+    color: white;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.blogCol2 .catBody div{
+    width: 100%;
+    height: 25%;
+    font-size: 18px;
+    margin: 16px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment{
+    width: 70%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    border: rgba(200, 200, 200, 0.815) 2px solid;
+    padding: 20px;
+}
+
+.comment h3{
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input,textarea{
+    border: none;
+    background-color: rgb(240, 240, 240);
+    margin: 12px 0;
+    padding: 12px 8px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.comment .hero-btn {
+    border: 2px solid #f44336;
+    color: #f44336;
+    margin-top: 20px;
+}
+
+.comment .hero-btn:hover {
+    color: white;
+}
+
+@media(max-width: 710px) {
+
+    .blogCol1 {
+        width: 100%;
+    }
+
+    .blogCol1 h1 {
+        font-size: 22px;
+    }
+
+    .blogCol2 {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .blogCol2 table {
+        font-size: 15px;
+    }
+
+    .comment{
+        width: 80%;
+    }
+
+    .comment h3{
+        font-size: 18px;
+    }
+}
+
+/* ----- Contact Page ------ */
+.contact{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.map{
+    width: 100%;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.map img{
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
+.contactCol{
+    flex-basis: 50%;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: left;
+}
+
+.address{
+    display: flex;
+    margin: 12px 12px 12px 0;
+    padding: 12px 0;
+    position: relative;
+    align-items: center;
+}
+
+.address i{
+    margin: auto 15px auto 10px;
+    font-size: 21px;
+    color: red;
+}
+
+.address h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.address small{
+    font-size: 14px;
+    color: #777;
+}
+
+.contactCol form .input{
+    margin: 12px 0;
+    padding: 16px 8px;
+    border: 2px solid rgba(204, 204, 204, 0.783);
+    background: none;
+}
+
+.contactCol .hero-btn {
+    border: 2px solid #f44336;
+    color: #f44336;
+    margin-top: 20px;
+}
+
+.contactCol .hero-btn:hover {
+    color: white;
+}
+
+@media(max-width: 710px) {
+
+    .address{
+        margin: 12px 10px 10px 0;
+        padding: 0;
+    }
+
+    .address h4{
+        font-size: 14px;
+    }
+
+    .address small{
+        font-size: 12px;
+    }
+}
